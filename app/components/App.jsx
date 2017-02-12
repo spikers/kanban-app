@@ -38,7 +38,7 @@ export default class App extends React.Component {
   }
 
   addNote = () => {
-    this.setState({notes: [...this.state.notes, {id: uuid.v4(),task: 'Lonono'}]
+    this.setState({notes: [...this.state.notes, {id: uuid.v4(),task: 'New Task'}]
     });
   }
 
