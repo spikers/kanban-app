@@ -1,5 +1,6 @@
 import React from 'react';
 import Notes from './Notes';
+import Button from './Button';
 
 import uuid from 'uuid';
 
@@ -26,7 +27,7 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <button className="add-note" onClick={this.addNote}>+</button>
+        <Button addNote={this.addNote}>+</Button>
         <Notes 
           notes={notes} 
           onNoteClick={this.activateNoteEdit}
@@ -44,7 +45,6 @@ export default class App extends React.Component {
 
   deleteNote = (id, e) => {
     e.stopPropagation();
-
     this.setState({
       notes: this.state.notes.filter(note => note.id != id)
     });
